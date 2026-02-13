@@ -27,7 +27,7 @@
             if (!BV_number) {
                 GM_notification({
                     text: '未能在当前页面找到 BV 号',
-                    title: 'Bilibili 助手',
+                    title: 'Bilibili 富文本分享',
                     timeout: 3000
                 });
                 return;
@@ -37,7 +37,7 @@
             if (!info) {
                 GM_notification({
                     text: '获取视频信息失败，请检查网络或 BV 号',
-                    title: 'Bilibili 助手',
+                    title: 'Bilibili 富文本分享',
                     timeout: 3000
                 });
                 return;
@@ -49,14 +49,14 @@
             GM_setClipboard(html, 'html');
             GM_notification({
                 text: '视频信息已复制到剪贴板（HTML 格式）',
-                title: 'Bilibili 助手',
+                title: 'Bilibili 富文本分享',
                 timeout: 3000
             });
         } catch (err) {
             console.error('分享失败:', err);
             GM_notification({
                 text: '操作失败: ' + err.message,
-                title: 'Bilibili 助手',
+                title: 'Bilibili 富文本分享',
                 timeout: 3000
             });
         }
